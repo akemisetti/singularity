@@ -18,5 +18,5 @@ From: nvcr.io/nvidia/tensorflow:19.11-tf1-py3
     pip install pytest-mpl
     pip install pixiedust
     pip install scikit-learn
-    pip install pillow
+    pip install pillow 
     echo "Container build done!" 
