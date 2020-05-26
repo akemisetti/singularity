@@ -7,7 +7,7 @@ From: nvcr.io/nvidia/tensorflow:19.11-tf1-py3
 
 %post
     # libraries
-    apt-get update && apt-get install -y libxss1 libgtk-3-0 libsecret-1-0 \
+    apt-get update && apt-get install -y -q libxss1 libgtk-3-0 libsecret-1-0 \
     libxkbfile1 gnupg libnss3 libnotify4 libasound2 libx11-xcb1 libasound2 \
     x11-apps libice6 libsm6 libxaw7 libxft2 libxmu6 libxpm4 \
     libxt6 x11-apps xbitmaps libgl1-mesa-glx
