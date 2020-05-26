@@ -7,6 +7,7 @@ From: nvcr.io/nvidia/tensorflow:19.11-tf1-py3
 %environment
     PYTHONPATH=/home/akemisetti/mydev/fastMRI:$PYTHONPATH
     export PYTHONPATH
+    
 %runscript
     exec /bin/bash $@  # runs whichever arguments given to the script
 
