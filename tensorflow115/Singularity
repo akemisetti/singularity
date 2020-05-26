@@ -1,9 +1,14 @@
 Bootstrap: docker
 From: nvcr.io/nvidia/tensorflow:19.11-tf1-py3
 
+%labels
+    Maintainer akemisetti
+
 %environment
     PYTHONPATH=/home/akemisetti/mydev/fastMRI:$PYTHONPATH
     export PYTHONPATH
+%runscript
+    exec /bin/bash $@  # runs whichever arguments given to the script
 
 %post
     # libraries
@@ -12,11 +17,5 @@ From: nvcr.io/nvidia/tensorflow:19.11-tf1-py3
     x11-apps libice6 libsm6 libxaw7 libxft2 libxmu6 libxpm4 \
     libxt6 x11-apps xbitmaps libgl1-mesa-glx
     # python section
-    pip install pytest
-    pip install pylint
-    pip install nose
-    pip install pytest-mpl
-    pip install pixiedust
-    pip install scikit-learn
-    pip install pillow 
+    pip install pytest pylint nose pytest-mpl pixiedust scikit-learn pillow  
     echo "Container build done!" 
